@@ -55,6 +55,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const grid = document.querySelector('.grid')
   const resultDisplay = document.querySelector('#result')
+  let videsTotals = 4
+  let vides = document.getElementById("vides")
   let cardsChosen = []
   let cardsChosenId = []
   let cardsWon = []
@@ -80,6 +82,8 @@ document.addEventListener('DOMContentLoaded', () => {
       cards[optionOneId].setAttribute('src', 'images/blank.png')
       cards[optionTwoId].setAttribute('src', 'images/blank.png')
       alert('You have clicked the same image!')
+      videsTotals = videsTotals - 1
+      vides.innerHTML = videsTotals
     }
     else if (cardsChosen[0] === cardsChosen[1]) {
       alert('You found a match')
@@ -92,6 +96,11 @@ document.addEventListener('DOMContentLoaded', () => {
       cards[optionOneId].setAttribute('src', 'images/blank.png')
       cards[optionTwoId].setAttribute('src', 'images/blank.png')
       alert('Sorry, try again')
+      videsTotals - videsTotals - 1
+      vides.innerHTML - videsTotals
+    }
+    if (videsTotals == 0) {
+      alert('Has perdut, Aleix Masferrer Vendrell')
     }
     cardsChosen = []
     cardsChosenId = []
