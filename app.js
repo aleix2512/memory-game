@@ -54,9 +54,9 @@ document.addEventListener('DOMContentLoaded', () => {
   cardArray.sort(() => 0.5 - Math.random())
 
   const grid = document.querySelector('.grid')
-  const resultDisplay = document.querySelector('#result')
+  const resultDisplay = document.querySelector('resultat')
   let videsTotals = 4
-  let vides = document.getElementById("vides")
+  let vides = document.getElementById("vida")
   let cardsChosen = []
   let cardsChosenId = []
   let cardsWon = []
@@ -96,8 +96,8 @@ document.addEventListener('DOMContentLoaded', () => {
       cards[optionOneId].setAttribute('src', 'images/blank.png')
       cards[optionTwoId].setAttribute('src', 'images/blank.png')
       alert('Sorry, try again')
-      videsTotals - videsTotals - 1
-      vides.innerHTML - videsTotals
+      videsTotals = videsTotals - 1
+      vides.innerHTML = videsTotals
     }
     if (videsTotals == 0) {
       alert('Has perdut, Aleix Masferrer Vendrell')
